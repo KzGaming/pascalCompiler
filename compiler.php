@@ -1,5 +1,5 @@
 <?php
-
+require_once 'serv.php';
 	require_once 'lib/error.class.php';
 	require_once 'lib/syntax.class.php';
 	require_once 'lib/code.class.php';
@@ -9,12 +9,21 @@
 
 	//prints the banner
 	echo "\n";
-	echo '  ······································· '."\n";
-	echo '·                                         ·'."\n";
-	echo '·  NESCAL - PASCAL COMPILER v0.3a         ·'."\n";
-	echo '·     created by Flávio Heleno [5890027]  ·'."\n";
-	echo '·                                         ·'."\n";
-	echo '  ······································· '."\n\n";
+	print(
+	"
+	=. ............................ .=
+	=.   THE INTERNATIONAL PROJECT  .=
+	=.	   PASCAL COMPILER      .=
+	=.      VERSION: 1.6z [6847]    .=
+	=.     UPDATED AT: N/A   [7302] .=
+	=.     BUG FIXES, ALERT REMOVED .=
+	=. ............................ .=
+USED: elixir,delixir,league,bashcal,deluxe
+SYSTEM: Win64 - 115.47 MB of RAM USED
+SERV: No result found
+SERVER: Admin will close the server in $tClose
+	");
+	echo "\n";
 	if ($argc < 3) //checks if user passed the source-file as an argument
 		echo '[usage] php -f compiler.php analysis-type source-file'."\n";
 	else {
